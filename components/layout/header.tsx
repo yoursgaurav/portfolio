@@ -62,7 +62,7 @@ export default function Header() {
         <nav
           id="header-nav"
           className={cn(
-            "@max-3xl:absolute @max-3xl:top-full @max-3xl:inset-x-0 @max-3xl:bg-background @max-3xl:border",
+            "@max-3xl:absolute @max-3xl:top-full @max-3xl:inset-x-0 @max-3xl:bg-background @max-3xl:border-y",
             {
               "@max-3xl:hidden": !isMenuOpen,
             }
