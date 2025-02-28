@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="max-w-md py-20 md:max-w-lg md:py-24 lg:max-w-xl lg:py-28 xl:max-w-2xl">
           <div className="grid gap-4 lg:gap-5">
             <h1 className="text-[clamp(2rem,1.2857142857142858rem+3.571428571428571vw,4.5rem)] leading-tight font-semibold tracking-tight text-balance">
-              Nice to meet you! I'm Gaurav Shukla
+              Nice to meet you! I&apos;m Gaurav Shukla
             </h1>
             <p className="text-muted-foreground text-[clamp(1rem,0.9285714285714286rem+0.35714285714285715vw,1.25rem)] font-medium text-pretty md:leading-7 lg:leading-8">
               A Frontend developer skilled in building accessible, responsive,
