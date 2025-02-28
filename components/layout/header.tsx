@@ -40,23 +40,49 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="@container sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 @container sticky top-0 z-50 w-full border-b backdrop-blur">
       <Wrapper className="flex items-center justify-between py-3 @5xl:py-4">
         {/* Logo */}
-        <Link href="/" className="@3xl:order-1">
+        <Link href="/">
           <Avatar className="size-10 @3xl:size-11">
             <AvatarImage src="/me.jpg" />
             <AvatarFallback>GS</AvatarFallback>
           </Avatar>
         </Link>
-        {/* Button group */}
-        <div className="flex items-center gap-2 @3xl:order-3">
+        {/* Navigation and togglers */}
+        <div className="flex items-center gap-2 @3xl:gap-8 @5xl:gap-10 @7xl:gap-12">
+          {/* Navigation */}
+          <nav
+            id="header-nav"
+            className={cn(
+              "@max-3xl:bg-background @max-3xl:absolute @max-3xl:inset-x-0 @max-3xl:top-full @max-3xl:border-y",
+              {
+                "@max-3xl:hidden": !isMenuOpen,
+              },
+            )}
+          >
+            <ul className="grid @3xl:flex @3xl:items-center @3xl:gap-8 @5xl:gap-10 @7xl:gap-12">
+              {navigation.map((link) => (
+                <li
+                  key={link.id}
+                  className="@max-3xl:px-6 @max-3xl:py-4 @max-3xl:text-right @max-3xl:not-first:border-t"
+                >
+                  <Link
+                    href={link.path}
+                    className="text-accent-foreground focus-visible:outline-primary text-sm font-bold tracking-widest uppercase focus-visible:outline-2 focus-visible:outline-offset-2 @3xl:@max-5xl:text-xs"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
           {/* Theme toggler */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild className="cursor-pointer">
               <Button variant="outline" size="icon">
-                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+                <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
                 <span className="sr-only">Toggle theme</span>
               </Button>
             </DropdownMenuTrigger>
@@ -90,32 +116,6 @@ export default function Header() {
             </span>
           </Button>
         </div>
-        {/* Navigation */}
-        <nav
-          id="header-nav"
-          className={cn(
-            "@max-3xl:absolute @max-3xl:top-full @max-3xl:inset-x-0 @max-3xl:bg-background @max-3xl:border-y @3xl:order-2",
-            {
-              "@max-3xl:hidden": !isMenuOpen,
-            }
-          )}
-        >
-          <ul className="grid @3xl:flex @3xl:items-center @3xl:gap-8 @5xl:gap-10 @6xl:gap-11 @7xl:gap-12">
-            {navigation.map((link) => (
-              <li
-                key={link.id}
-                className="@max-3xl:not-first:border-t @max-3xl:px-6 @max-3xl:py-4 @max-3xl:text-right"
-              >
-                <Link
-                  href={link.path}
-                  className="uppercase text-sm font-bold tracking-widest text-accent-foreground @3xl:@max-5xl:text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
       </Wrapper>
     </header>
   );
