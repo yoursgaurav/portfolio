@@ -43,9 +43,9 @@ export default function Header() {
     <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 @container sticky top-0 z-50 w-full border-b backdrop-blur">
       <Wrapper className="flex items-center justify-between py-3 @5xl:py-4">
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" aria-label="Go to homepage">
           <Avatar className="size-10 @3xl:size-11">
-            <AvatarImage src="/me.jpg" />
+            <AvatarImage src="/me.jpg" alt="Gaurav Shukla's DP" />
             <AvatarFallback>GS</AvatarFallback>
           </Avatar>
         </Link>
@@ -58,7 +58,7 @@ export default function Header() {
               "@max-3xl:bg-background @max-3xl:absolute @max-3xl:inset-x-0 @max-3xl:top-full @max-3xl:border-y",
               {
                 "@max-3xl:hidden": !isMenuOpen,
-              },
+              }
             )}
           >
             <ul className="grid @3xl:flex @3xl:items-center @3xl:gap-8 @5xl:gap-10 @7xl:gap-12">
