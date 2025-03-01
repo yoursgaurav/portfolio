@@ -69,7 +69,7 @@ export default function Header() {
                 >
                   <Link
                     href={link.path}
-                    className="text-accent-foreground focus-visible:outline-primary text-sm font-bold tracking-widest uppercase focus-visible:outline-2 focus-visible:outline-offset-2 @3xl:@max-5xl:text-xs"
+                    className="text-muted-foreground hover:text-accent-foreground focus-visible:outline-primary text-sm font-bold tracking-widest uppercase focus-visible:outline-2 focus-visible:outline-offset-2 transition-all @3xl:@max-5xl:text-xs"
                   >
                     {link.name}
                   </Link>
