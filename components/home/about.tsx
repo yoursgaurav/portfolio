@@ -53,11 +53,8 @@ const SKILLS: SkillItem[] = [
 
 export default function About() {
   return (
-    <section
-      id="about-section"
-      className="scroll-my-16 py-6 md:py-8 lg:py-10 xl:py-12"
-    >
-      <Wrapper className="grid gap-10 md:gap-12 lg:gap-14 xl:gap-16">
+    <section id="about-section" className="scroll-my-16 py-10">
+      <Wrapper className="grid gap-10 md:gap-12 lg:gap-14">
         {/* Section Header */}
         <header className="grid max-w-md gap-2">
           <TypographyH2>
