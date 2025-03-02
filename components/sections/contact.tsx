@@ -2,17 +2,17 @@
 
 // External dependencies
 import { useState } from "react";
+import { Send } from "lucide-react";
 
 // Local UI components (Shadcn/UI)
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 
 // Local layout and typography components
 import Wrapper from "../layout/wrapper";
 import TypographyH2 from "../typography/typography-h2";
-import { Label } from "../ui/label";
-import { Send } from "lucide-react";
 
 // Types
 interface ContactFormData {
