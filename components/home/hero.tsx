@@ -7,6 +7,7 @@ import { Button } from "../ui/button";
 
 // Local Layout components
 import Wrapper from "../layout/wrapper";
+import TypographyH1 from "../typography/typography-h1";
 
 // Constants
 const HERO_CONTENT = {
@@ -51,13 +52,13 @@ export default function Hero() {
         {/* Hero Content */}
         <main className="max-w-md py-20 md:max-w-lg lg:max-w-xl xl:max-w-2xl">
           <article className="grid gap-5 md:gap-6 lg:gap-7 xl:gap-8">
-            <h1 className="text-[clamp(1.875rem,1.125rem+3.75vw,4.5rem)]/tight font-bold tracking-tight text-balance">
+            <TypographyH1>
               Nice to meet you! I&apos;m{" "}
               <span className="border-primary border-b-4 md:border-b-5 lg:border-b-6">
                 {HERO_CONTENT.name}
               </span>
               .
-            </h1>
+            </TypographyH1>
             <p className="text-muted-foreground text-[clamp(1rem,0.96rem+0.17vw,1.125rem)]/relaxed font-medium text-pretty">
               {HERO_CONTENT.description.trim()}
             </p>
