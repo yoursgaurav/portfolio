@@ -7,7 +7,7 @@ import Wrapper from "@/components/layout/wrapper";
 
 export default function NotFound() {
   return (
-    <section className="min-h-[85vh] grid content-center">
+    <section className="grid min-h-[85vh] content-center">
       <Wrapper className="grid gap-6 text-center md:gap-8 lg:gap-10">
         <TypographyH1>404 - Page Not Found</TypographyH1>
         <p className="text-muted-foreground text-lg">
@@ -15,7 +15,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="text-primary hover:underline text-lg font-medium"
+          className="text-primary text-lg font-medium hover:underline"
         >
           Return Home
         </Link>
