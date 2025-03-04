@@ -10,67 +10,8 @@ import Wrapper from "../layout/wrapper";
 import TypographyH2 from "../typography/typography-h2";
 import TypographyH3 from "../typography/typography-h3";
 
-// Types
-interface ProjectItem {
-  id: number;
-  title: string;
-  description: string;
-  image: {
-    src: string;
-    alt: string;
-  };
-  techStack: string[];
-  url: string;
-}
-
-// Constants
-const PROJECTS: ProjectItem[] = [
-  {
-    id: 1,
-    title: "Shortly - URL Shortener",
-    description: `
-      Built a responsive URL-shortening app with ARIA labels for accessibility compliance.
-      Integrated Next.js API routes for secure, efficient data processing. Achieved a
-      Lighthouse score of 100 for performance, accessibility, and SEO.
-    `,
-    image: {
-      src: "/projects/shortly/desktop-preview.jpg",
-      alt: "Shortly - URL Shortener preview",
-    },
-    techStack: ["React", "Next.js", "Tailwind CSS"],
-    url: "https://github.com/yoursgaurav/shortly",
-  },
-  {
-    id: 2,
-    title: "IP Address Tracker",
-    description: `
-      Created a real-time IP tracking tool with a responsive, device-optimized design.
-      Utilized IPify API to provide accurate location data, improving functionality.
-      Attained a Lighthouse score of 99 with a 1.5-second load time.
-    `,
-    image: {
-      src: "/projects/ip-address-tracker/desktop-preview.jpg",
-      alt: "IP Address Tracker preview",
-    },
-    techStack: ["React", "Next.js", "Tailwind CSS"],
-    url: "https://github.com/yoursgaurav/ip-address-tracker",
-  },
-  {
-    id: 3,
-    title: "Portfolio Website",
-    description: `
-      Created my own portfolio website using Next.js and Shadcn/UI. The website is fully
-      responsive and optimized for performance. It showcases my projects, skills, and
-      contact information.
-    `,
-    image: {
-      src: "/projects/portfolio/desktop-preview.png",
-      alt: "Portfolio website preview",
-    },
-    techStack: ["React", "Next.js", "Tailwind CSS"],
-    url: "https://github.com/yoursgaurav/portfolio",
-  },
-];
+// Constants and data
+import { projects } from "@/constants/projects";
 
 const SECTION_HEADER = {
   title: "My Projects",
@@ -96,22 +37,22 @@ export default function Projects() {
         {/* Project List */}
         <main>
           <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {PROJECTS.map((project) => (
+            {projects.map((project) => (
               <li
-                key={project.id}
+                key={project.slug}
                 className="bg-card text-card-foreground overflow-hidden rounded-lg border shadow-md"
               >
                 {/* Project Image */}
                 <Link
-                  href={project.url}
+                  href={project.urls.caseStudyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
                 >
                   <AspectRatio ratio={4 / 3}>
                     <Image
-                      src={project.image.src}
-                      alt={project.image.alt}
+                      src={project.images.preview.src}
+                      alt={project.images.preview.alt}
                       width={400}
                       height={300}
                       className="size-full object-cover object-top transition-all duration-300 hover:scale-105"
@@ -122,7 +63,7 @@ export default function Projects() {
                 {/* Project Details */}
                 <div className="grid gap-3 p-6">
                   <Link
-                    href={project.url}
+                    href={project.urls.caseStudyUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

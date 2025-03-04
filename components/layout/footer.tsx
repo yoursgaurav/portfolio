@@ -1,39 +1,11 @@
 // External dependencies
 import Link from "next/link";
-import { Github, Twitter, Linkedin } from "lucide-react";
 
 // Local layout components
 import Wrapper from "./wrapper";
 
-// Types
-interface FooterLink {
-  id: number;
-  name: string;
-  url: string;
-  icon: React.ComponentType<{ className?: string }>;
-}
-
-// Constants
-const FOOTER_LINKS: FooterLink[] = [
-  {
-    id: 1,
-    name: "GitHub",
-    url: "https://github.com/yoursgaurav",
-    icon: Github,
-  },
-  {
-    id: 2,
-    name: "X",
-    url: "https://x.com/heygauravshukla",
-    icon: Twitter,
-  },
-  {
-    id: 3,
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/heygauravshukla/",
-    icon: Linkedin,
-  },
-];
+// Constants and data
+import { socialLinks } from "@/constants/navigation";
 
 const FOOTER_CONTENT = {
   brand: "gauravshukla",
@@ -55,17 +27,21 @@ export default function Footer() {
         {/* Social Links */}
         <nav>
           <ul className="flex gap-5 md:gap-6">
-            {FOOTER_LINKS.map((link) => {
-              const Icon = link.icon;
+            {socialLinks.map((link) => {
+              const Icon = link.icon; // Type: ComponentType | undefined
               return (
-                <li key={link.id}>
+                <li key={link.name}>
                   <Link
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-primary transition-colors"
                   >
-                    <Icon className="size-5 xl:size-6" />
+                    {Icon ? (
+                      <Icon className="size-5 xl:size-6" />
+                    ) : (
+                      <span>{link.name}</span> // Fallback if no icon
+                    )}
                     <span className="sr-only">{`Visit ${link.name} profile`}</span>
                   </Link>
                 </li>

@@ -20,20 +20,8 @@ import {
 import { cn } from "@/lib/utils";
 import Wrapper from "./wrapper";
 
-// Types
-interface NavigationItem {
-  id: number;
-  name: string;
-  path: string;
-}
-
-// Constants
-const NAVIGATION_ITEMS: NavigationItem[] = [
-  { id: 1, name: "Home", path: "/" },
-  { id: 2, name: "About", path: "#about-section" },
-  { id: 3, name: "Projects", path: "#projects-section" },
-  { id: 4, name: "Contact", path: "#contact-section" },
-];
+// Constants and data
+import { websiteLinks } from "@/constants/navigation";
 
 const AVATAR_CONFIG = {
   src: "/me.jpg",
@@ -70,13 +58,13 @@ export default function Header() {
             )}
           >
             <ul className="grid @3xl:flex @3xl:items-center @3xl:gap-8 @5xl:gap-10 @7xl:gap-12">
-              {NAVIGATION_ITEMS.map((link) => (
+              {websiteLinks.map((link) => (
                 <li
-                  key={link.id}
+                  key={link.name}
                   className="@max-3xl:px-6 @max-3xl:py-4 @max-3xl:text-right @max-3xl:not-first:border-t"
                 >
                   <Link
-                    href={link.path}
+                    href={link.url}
                     className="text-muted-foreground hover:text-primary focus-visible:outline-primary text-sm font-bold tracking-widest uppercase focus-visible:outline-2 focus-visible:outline-offset-2 transition-all @3xl:@max-5xl:text-xs"
                   >
                     {link.name}
