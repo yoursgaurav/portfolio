@@ -1,9 +1,14 @@
+// External dependencies
 import type { Metadata } from "next";
 import { Roboto_Slab } from "next/font/google";
-import "./globals.css";
+
+// Local components and providers
 import { ThemeProvider } from "@/components/theme-provider";
-import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
+
+// Styles
+import "./globals.css";
 
 const robotoSlab = Roboto_Slab({
   variable: "--font-roboto-slab",
