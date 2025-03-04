@@ -21,12 +21,12 @@ export const socialLinks: NavigationItem[] = [
   },
   {
     name: "Twitter",
-    url: "https://twitter.com/yoursgaurav",
+    url: "https://twitter.com/heygauravshukla",
     icon: Twitter,
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/yoursgaurav",
+    url: "https://linkedin.com/in/heygauravshukla",
     icon: Linkedin,
   },
 ] as const;
