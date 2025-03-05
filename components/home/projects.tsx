@@ -43,12 +43,7 @@ export default function Projects() {
                 className="bg-card text-card-foreground overflow-hidden rounded-lg border shadow-md"
               >
                 {/* Project Image */}
-                <Link
-                  href={project.urls.caseStudyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
+                <Link href={`/projects/${project.slug}`} className="block">
                   <AspectRatio ratio={4 / 3}>
                     <Image
                       src={project.images.preview.src}
@@ -62,11 +57,7 @@ export default function Projects() {
 
                 {/* Project Details */}
                 <div className="grid gap-3 p-6">
-                  <Link
-                    href={project.urls.caseStudyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <Link href={`/projects/${project.slug}`}>
                     <TypographyH3 className="line-clamp-1 transition-all duration-300 hover:underline">
                       {project.title}
                     </TypographyH3>
