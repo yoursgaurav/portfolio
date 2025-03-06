@@ -17,7 +17,10 @@ export default function Wrapper<T extends ElementType = "div">({
 
   return (
     <Component
-      className={cn("mx-auto w-[min(100%-calc(2*1.5rem),75rem)]", className)}
+      className={cn(
+        "mx-auto max-w-7xl px-5 sm:px-7 lg:px-9 xl:px-11",
+        className,
+      )}
       {...props}
     >
       {children}
