@@ -16,9 +16,9 @@ const robotoSlab = Roboto_Slab({
 });
 
 export const metadata: Metadata = {
-  title: "Gaurav Shukla | Frontend Developer Portfolio",
+  title: "Gaurav Shukla - Frontend developer, creator, and tech enthusiast",
   description:
-    "Explore the portfolio of Gaurav Shukla, a passionate frontend developer showcasing projects, skills, and expertise in modern web development with Next.js, React, and more.",
+    "I’m Gaurav, a frontend developer and innovator based in India. I specialize in crafting modern web experiences with Next.js, React, and cutting-edge technologies, empowering users through seamless design and functionality.",
 };
 
 export default function RootLayout({
