@@ -20,18 +20,23 @@ This is the Git repository for my personal [portfolio](https://heygauravshukla.v
 
 ### The challenge
 
-Users should be able to:
+Visitors can:
 
 - Browse my portfolio website from any device with a responsive layout.
 - View the website in their preferred color scheme (light/dark mode).
 - Access the site with WCAG-compliant features for users with disabilities.
 - Navigate fully using keyboard controls for enhanced accessibility.
 
+Additional development challenges included:
+
+- Centralizing content management without modifying individual components.
+- Creating consistent case study pages for the projects.
+
 ### Screenshot
 
 ![Portfolio Desktop Preview](./public/projects/portfolio/desktop-preview.png)
 
-_Desktop view of the portfolio showcasing the hero section and layout._
+_Desktop view of the portfolio showcasing the hero section._
 
 ### Links
 
@@ -46,23 +51,27 @@ _Desktop view of the portfolio showcasing the hero section and layout._
 - Container queries
 - Mobile-first workflow
 - Utility-first CSS classes
+- Next.js Static Site Generation (SSG)
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [Tailwind CSS (v4)](https://tailwindcss.com/) - Utility-first CSS framework
 - [shadcn/ui](https://ui.shadcn.com/) - Accessible UI component library
-- [Lucide](https://lucide.dev/) - Beautiful & consistent icon set
+- [Lucide](https://lucide.dev/) - A beautiful and consistent icon set
 - [EmailJS](https://www.emailjs.com/) - Client-side email service
 
 ### What I learned
 
 - Using shadcn/ui to build a custom component library efficiently.
 - Applying container queries in Tailwind CSS v4 to style child elements based on parent container size rather than viewport.
+
   ```jsx
   <header className="... @container ...">
     <Wrapper className="... @5xl:py-4">...</Wrapper>
   </header>
   ```
+
 - Integrating services like EmailJS for functional contact forms without a backend or database.
+
   ```jsx
   try {
     const result = await emailjs.send(
@@ -78,12 +87,14 @@ _Desktop view of the portfolio showcasing the hero section and layout._
     // ...
   }
   ```
+
 - Leveraging TypeScript for type-safe component props and form data management.
-- Harnessing AI tools to accelerate application development while securing sensitive data with environment variables.
+- Using AI tools to accelerate development while ensuring security through environment variables.
+- Using a `constants/` directory to centralize content management, reducing the need to dig into individual components for updates.
+- Implementing Next.js static site generation with `app/projects/[slug]/page.tsx` to create individual project case study pages that are consistent, maintainable, and avoid code duplication.
 
 ### Continued development
 
-- Develop individual project pages with detailed case studies for each portfolio item.
 - Enhance website design to meet WCAG standards for accessibility.
 - Implement subtle animations using Tailwind CSS, with opt-out options for users preferring reduced motion.
 
@@ -100,9 +111,8 @@ _Desktop view of the portfolio showcasing the hero section and layout._
 
 ## Acknowledgments
 
-- **Frontend Mentor**: For inspiring me with practical challenges that shaped this portfolio’s project section.
-- **Design Inspirations**:
-  - [Ram Maheshwari's portfolio](https://www.rammaheshwari.com/) - Influenced the header and about section layout.
-  - [FEM challenges page](https://www.frontendmentor.io/challenges) - Guided the projects section design.
-  - [FEM Single-page developer portfolio](https://www.frontendmentor.io/challenges/singlepage-developer-portfolio-bBVj2ZPi-x) - Shaped the hero text and footer styling.
-  - [shadcn/ui homepage](https://ui.shadcn.com/) - Inspired the hero section’s clean aesthetic.
+These are some of the websites that I took design inspiration from:
+
+- [Ram Maheshwari's portfolio](https://www.rammaheshwari.com/)
+- [Frontend Mentor](https://www.frontendmentor.io/)
+- [shadcn/ui](https://ui.shadcn.com/)
