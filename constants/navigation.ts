@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { FaXTwitter, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export interface NavigationItem {
   name: string;
@@ -17,16 +17,21 @@ export const socialLinks: NavigationItem[] = [
   {
     name: "GitHub",
     url: "https://github.com/yoursgaurav",
-    icon: Github,
+    icon: FaGithub,
   },
   {
     name: "Twitter",
     url: "https://twitter.com/heygauravshukla",
-    icon: Twitter,
+    icon: FaXTwitter,
   },
   {
     name: "LinkedIn",
     url: "https://linkedin.com/in/heygauravshukla",
-    icon: Linkedin,
+    icon: FaLinkedin,
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com/heygauravshukla",
+    icon: FaInstagram,
   },
 ] as const;
