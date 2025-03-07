@@ -26,8 +26,8 @@ const HERO_CONTENT = {
 
 export default function Hero() {
   return (
-    <section className="py-5">
-      <Wrapper>
+    <section>
+      <Wrapper className="py-7">
         <article className="grid max-w-2xl gap-7">
           {/* Avatar */}
           <Avatar className="size-16">
