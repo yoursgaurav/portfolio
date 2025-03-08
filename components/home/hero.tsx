@@ -26,7 +26,7 @@ export default function Hero() {
 
           {/* Hero Description */}
           <p className="text-muted-foreground text-base/7">
-            {HERO_CONTENT.description.trim()}
+            {HERO_CONTENT.description}
           </p>
 
           {/* Social Links Navigation */}
