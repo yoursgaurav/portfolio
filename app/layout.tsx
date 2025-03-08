@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 
 // Local components and providers
 import { ThemeProvider } from "@/components/theme-provider";
-import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 // Styles
 import "./globals.css";
@@ -24,7 +24,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className="antialiased scroll-smooth"
+      className="scroll-smooth antialiased"
     >
       <body>
         <ThemeProvider
