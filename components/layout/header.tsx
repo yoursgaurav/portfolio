@@ -24,7 +24,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-// Constants and data
+// Constants
 import { websiteLinks } from "@/constants/navigation";
 
 export default function Header() {
