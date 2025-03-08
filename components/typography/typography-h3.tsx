@@ -12,10 +12,7 @@ export default function TypographyH3({
 }: TypographyH3Props) {
   return (
     <h3
-      className={cn(
-        "text-[clamp(1.25rem,1.178rem+0.357vw,1.5rem)]/tight font-bold tracking-tight text-balance",
-        className,
-      )}
+      className={cn("text-2xl font-semibold tracking-tight", className)}
       {...props}
     >
       {children}
