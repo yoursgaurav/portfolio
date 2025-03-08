@@ -7,22 +7,8 @@ import TypographyH1 from "../typography/typography-h1";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 // Constants
+import { AVATAR_CONFIG, HERO_CONTENT } from "@/constants/hero";
 import { socialLinks } from "@/constants/navigation";
-
-// Avatar configuration
-const AVATAR_CONFIG = {
-  src: "/gaurav-shukla.jpg",
-  alt: "Gaurav Shukla's profile picture",
-  fallback: "GS",
-};
-
-// Hero section content
-const HERO_CONTENT = {
-  title: "Frontend developer, creator, and tech enthusiast.",
-  description: `
-    I’m Gaurav, a frontend developer and innovator based in Mohali City. I build modern, user-focused web experiences with tools like Next.js and React, passionate about creating solutions that blend design and technology seamlessly.
-  `,
-};
 
 export default function Hero() {
   return (
