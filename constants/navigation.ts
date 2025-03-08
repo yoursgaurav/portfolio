@@ -8,7 +8,7 @@ export interface NavigationItem {
 
 export const websiteLinks: NavigationItem[] = [
   { name: "Home", url: "/" },
-  { name: "About", url: "/#about-section" },
+  { name: "Skills", url: "/#skills-section" },
   { name: "Projects", url: "/#projects-section" },
   { name: "Contact", url: "/#contact-section" },
 ] as const;
