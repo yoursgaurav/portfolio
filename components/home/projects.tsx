@@ -2,48 +2,36 @@
 import Link from "next/link";
 import Image from "next/image";
 
-// Local UI components (Shadcn/UI)
-import { AspectRatio } from "../ui/aspect-ratio";
-
-// Local layout and typography components
+// Local components
 import Wrapper from "../layout/wrapper";
 import TypographyH2 from "../typography/typography-h2";
 import TypographyH3 from "../typography/typography-h3";
+import { AspectRatio } from "../ui/aspect-ratio";
 
-// Constants and data
+// Constants
 import { projects } from "@/constants/projects";
-
-const SECTION_HEADER = {
-  title: "My Projects",
-  subtitle: "Discover projects that I have built",
-};
 
 export default function Projects() {
   return (
-    <section id="projects-section" className="scroll-my-16 py-12 md:py-16">
-      <Wrapper className="grid gap-10 md:gap-12 lg:gap-14">
+    <section id="projects-section">
+      <Wrapper className="grid gap-7 py-7">
         {/* Section Header */}
-        <header className="grid max-w-md gap-2">
-          <TypographyH2>
-            <span className="border-primary border-b-3">
-              {SECTION_HEADER.title}
-            </span>
-          </TypographyH2>
-          <p className="text-muted-foreground text-pretty">
-            {SECTION_HEADER.subtitle}
-          </p>
+        <header>
+          <TypographyH2>Projects</TypographyH2>
         </header>
 
-        {/* Project List */}
+        {/* Main Content */}
         <main>
-          <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {/* Projects List */}
+          <ul className="grid grid-cols-[repeat(auto-fill,minmax(min(280px,100%),1fr))] gap-5 md:gap-7">
             {projects.map((project) => (
+              // Project Card
               <li
                 key={project.slug}
-                className="bg-card text-card-foreground overflow-hidden rounded-lg border shadow-md"
+                className="bg-card text-card-foreground overflow-hidden rounded-md border shadow-md"
               >
                 {/* Project Image */}
-                <Link href={`/projects/${project.slug}`} className="block">
+                <Link href={`/projects/${project.slug}`}>
                   <AspectRatio ratio={4 / 3}>
                     <Image
                       src={project.images.preview.src}
@@ -56,24 +44,29 @@ export default function Projects() {
                 </Link>
 
                 {/* Project Details */}
-                <div className="grid gap-3 p-6">
+                <div className="grid gap-3 p-5">
+                  {/* Project Title */}
                   <Link href={`/projects/${project.slug}`}>
-                    <TypographyH3 className="line-clamp-1 transition-all duration-300 hover:underline">
+                    <TypographyH3 className="text-primary line-clamp-1 transition-all duration-300 hover:underline">
                       {project.title}
                     </TypographyH3>
                   </Link>
-                  <ul className="flex flex-wrap gap-2">
+
+                  {/* Project Tech Stack */}
+                  <ul className="flex flex-wrap items-center gap-3">
                     {project.techStack.map((tech) => (
                       <li
                         key={tech}
-                        className="text-primary text-xs font-semibold uppercase"
+                        className="text-muted-foreground text-xs font-bold tracking-wide uppercase"
                       >
                         {tech}
                       </li>
                     ))}
                   </ul>
-                  <p className="text-muted-foreground line-clamp-4 leading-relaxed text-pretty">
-                    {project.description.trim()}
+
+                  {/* Project Description */}
+                  <p className="text-muted-foreground line-clamp-4">
+                    {project.description}
                   </p>
                 </div>
               </li>
