@@ -71,7 +71,7 @@ export default function Header() {
           </Sheet>
 
           {/* Desktop Navigation Menu */}
-          <ul className="bg-secondary hidden items-center gap-7 rounded-md border px-6 py-2 md:flex">
+          <ul className="bg-secondary text-secondary-foreground hidden items-center gap-7 rounded-md border px-6 py-2 md:flex">
             {websiteLinks.map((link) => (
               <li key={link.name}>
                 <Link
