@@ -2,18 +2,23 @@
 
 // External dependencies
 import { useState } from "react";
-import { Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { FaEnvelopeCircleCheck } from "react-icons/fa6";
+import { FiAlertCircle } from "react-icons/fi";
+import { IoIosSend } from "react-icons/io";
 
-// Local UI components (Shadcn/UI)
+// Local components
+import Wrapper from "../layout/wrapper";
+import TypographyH2 from "../typography/typography-h2";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Textarea } from "../ui/textarea";
 
-// Local layout and typography components
-import Wrapper from "../layout/wrapper";
-import TypographyH2 from "../typography/typography-h2";
+// Constants
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
 // Types
 interface ContactFormData {
@@ -21,16 +26,6 @@ interface ContactFormData {
   email: string;
   message: string;
 }
-
-// Constants
-const SECTION_HEADER = {
-  title: "Contact Me",
-  subtitle: "Let's work together on your next project!",
-};
-
-const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
-const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
-const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
 export default function Contact() {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -77,57 +72,62 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact-section" className="scroll-my-16 py-12 md:py-16">
-      <Wrapper className="grid gap-10 md:gap-12 lg:gap-14">
+    <section id="contact-section">
+      <Wrapper className="grid gap-7 py-15 sm:py-19">
         {/* Section Header */}
-        <header className="grid max-w-md gap-2">
-          <TypographyH2>
-            <span className="border-primary border-b-3">
-              {SECTION_HEADER.title}
-            </span>
-          </TypographyH2>
-          <p className="text-muted-foreground text-pretty">
-            {SECTION_HEADER.subtitle}
-          </p>
+        <header>
+          <TypographyH2>Contact</TypographyH2>
         </header>
 
-        {/* Contact Form */}
-        <main className="max-w-md md:max-w-lg lg:max-w-xl">
+        {/* Main Content */}
+        <main>
           {isSubmitted ? (
-            <p className="text-primary text-lg font-medium">
-              Thank you! Your message has been sent. I’ll get back to you soon.
-            </p>
+            // Success Alert
+            <section className="border-chart-2 text-chart-2 my-3 flex items-start gap-3 rounded-md border px-4 py-3">
+              <FaEnvelopeCircleCheck className="mt-1 size-5" />
+              <div>
+                <span className="leading-none font-medium tracking-tight">
+                  Sent
+                </span>
+                <p className="text-sm">
+                  Thank you! Your message has been sent. I’ll get back to you
+                  soon.
+                </p>
+              </div>
+            </section>
           ) : (
-            <form onSubmit={handleSubmit} className="grid gap-6">
-              {/* Name Field */}
-              <div className="grid gap-2">
-                <Label htmlFor="name">Name</Label>
-                <Input
-                  id="name"
-                  name="name"
-                  type="text"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="Your Name"
-                />
-              </div>
+            // Contact Form
+            <form onSubmit={handleSubmit} className="grid gap-5 sm:gap-7">
+              {/* Personal details */}
+              <fieldset className="grid gap-5 sm:gap-7 md:grid-cols-2">
+                <legend className="sr-only">Personal details</legend>
+                <div className="grid gap-2">
+                  <Label htmlFor="name">Name</Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="Your Email"
+                  />
+                </div>
+              </fieldset>
 
-              {/* Email Field */}
-              <div className="grid gap-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="Your Email"
-                />
-              </div>
-
-              {/* Message Field */}
+              {/* Message */}
               <div className="grid gap-2">
                 <Label htmlFor="message">Message</Label>
                 <Textarea
@@ -137,18 +137,26 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   placeholder="Your Message"
-                  className="min-h-[120px]"
+                  className="min-h-40"
                 />
               </div>
 
-              {/* Error Message */}
+              {/* Error Alert */}
               {error && (
-                <p className="text-destructive text-sm font-medium">{error}</p>
+                <div className="text-destructive border-destructive my-3 flex items-start gap-3 rounded-md border px-4 py-3">
+                  <FiAlertCircle className="mt-1 size-5" />
+                  <div>
+                    <span className="leading-none font-medium tracking-tight">
+                      Error
+                    </span>
+                    <p className="text-sm">{error}</p>
+                  </div>
+                </div>
               )}
 
               {/* Submit Button */}
-              <Button type="submit" className="justify-self-end">
-                Send Message <Send />
+              <Button type="submit" className="cursor-pointer justify-self-end">
+                Send message <IoIosSend className="size-5" />
               </Button>
             </form>
           )}
