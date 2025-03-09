@@ -19,8 +19,12 @@ export default function Footer() {
       <Wrapper className="py-7">
         <p className="text-center leading-relaxed text-pretty">
           <span>
-            Built with <FaHeart className="text-destructive inline" /> and too
-            much React by
+            Built with <span className="sr-only">love</span>
+            <FaHeart
+              className="text-destructive inline"
+              aria-hidden="true"
+            />{" "}
+            and too much React by
           </span>{" "}
           <Link
             href={twitterLink}
