@@ -101,6 +101,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 src={project.overview.preview.src}
                 alt={project.overview.preview.alt}
                 fill
+                priority
+                sizes="(max-width: 672px) 100vw, 672px"
                 className="rounded-md object-cover object-top"
               />
             </AspectRatio>
@@ -127,7 +129,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   alt={project.lighthouse.screenshot.alt}
                   width={500}
                   height={150}
-                  className="rounded-md"
+                  className="h-auto w-full rounded-md"
                 />
                 <figcaption className="text-muted-foreground">
                   <ul className="list-none space-y-1">
