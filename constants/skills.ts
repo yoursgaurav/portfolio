@@ -1,5 +1,7 @@
+import { BiLogoTypescript } from "react-icons/bi";
 import { FaTasks } from "react-icons/fa";
 import {
+  FaCodeBranch,
   FaCss3Alt,
   FaFigma,
   FaGitAlt,
@@ -8,6 +10,8 @@ import {
   FaJs,
   FaReact,
 } from "react-icons/fa6";
+import { IoAccessibility } from "react-icons/io5";
+import { MdDevices } from "react-icons/md";
 import {
   RiNextjsFill,
   RiSeoLine,
@@ -15,10 +19,6 @@ import {
   RiVercelFill,
 } from "react-icons/ri";
 import { SiNetlify } from "react-icons/si";
-import { BiLogoTypescript } from "react-icons/bi";
-import { PiPlugsFill } from "react-icons/pi";
-import { MdImportantDevices } from "react-icons/md";
-import { IoAccessibility } from "react-icons/io5";
 
 export interface SkillItem {
   name: string;
@@ -26,20 +26,29 @@ export interface SkillItem {
 }
 
 export const skills: SkillItem[] = [
+  // Core Languages
   { name: "HTML", icon: FaHtml5 },
   { name: "CSS", icon: FaCss3Alt },
   { name: "JavaScript", icon: FaJs },
+  { name: "TypeScript", icon: BiLogoTypescript },
+
+  // Frameworks/Libraries
   { name: "React", icon: FaReact },
   { name: "Next.js", icon: RiNextjsFill },
-  { name: "TypeScript", icon: BiLogoTypescript },
   { name: "Tailwind CSS", icon: RiTailwindCssFill },
+
+  // Version Control/Deployment
   { name: "Git", icon: FaGitAlt },
   { name: "GitHub", icon: FaGithub },
   { name: "Vercel", icon: RiVercelFill },
   { name: "Netlify", icon: SiNetlify },
+
+  // Design/Tools
   { name: "Figma", icon: FaFigma },
-  { name: "API integration", icon: PiPlugsFill },
-  { name: "Responsive design", icon: MdImportantDevices },
+
+  // Development Practices
+  { name: "API Integration", icon: FaCodeBranch },
+  { name: "Responsive Design", icon: MdDevices },
   { name: "Accessibility", icon: IoAccessibility },
   { name: "SEO", icon: RiSeoLine },
   { name: "Agile Methodology", icon: FaTasks },
