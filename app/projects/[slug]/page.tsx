@@ -1,50 +1,48 @@
 // External dependencies
-import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ReactNode } from "react";
+import { FaArrowLeft } from "react-icons/fa6";
 
 // Local components
 import Wrapper from "@/components/layout/wrapper";
 import TypographyH1 from "@/components/typography/typography-h1";
 import TypographyH2 from "@/components/typography/typography-h2";
-import TypographyH3 from "@/components/typography/typography-h3";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 
-// Constants and data
+// Constants
 import { projects, type Project } from "@/constants/projects";
 
-// Case Study Card
-function CSCard({
+function Article({
   title,
   paragraph,
   listItems,
+  children,
 }: {
   title: string;
   paragraph?: string;
   listItems?: string[];
+  children?: ReactNode;
 }) {
   return (
-    <div className="bg-card text-card-foreground grid gap-3 rounded-lg border p-6">
-      <TypographyH3 className="text-primary">{title}</TypographyH3>
+    <article className="space-y-3">
+      <TypographyH2 className="text-xl sm:text-2xl">{title}</TypographyH2>
       {paragraph && (
-        <p className="text-muted-foreground leading-relaxed tracking-wide text-pretty">
-          {paragraph}
-        </p>
+        <p className="text-muted-foreground text-pretty">{paragraph}</p>
       )}
       {listItems && (
-        <ul className="grid list-disc gap-1 pl-5">
+        <ul className="list-disc space-y-2 pl-7">
           {listItems.map((item, index) => (
-            <li
-              key={index}
-              className="text-muted-foreground leading-relaxed tracking-wide text-pretty"
-            >
+            <li key={index} className="text-muted-foreground">
               {item}
             </li>
           ))}
         </ul>
       )}
-    </div>
+      {children}
+    </article>
   );
 }
 
@@ -54,107 +52,100 @@ interface ProjectPageProps {
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
-
-  // Explicitly type the project variable with Project
   const project: Project = projects.find((p) => p.slug === slug) || notFound();
 
   return (
     <section>
-      <Wrapper className="grid gap-6 py-6">
-        {/* Project Header */}
-        <header className="bg-card text-card-foreground grid items-start gap-6 rounded-lg border p-6 shadow-md md:grid-cols-2 lg:gap-12">
-          {/* Image gallery */}
-          <section className="md:order-2 lg:self-end">
+      <Wrapper className="space-y-12 py-12 sm:py-16">
+        {/* Back Button */}
+        <Button asChild variant="secondary">
+          <Link href="/#projects-section" aria-label="Back to Projects">
+            <FaArrowLeft className="mr-2 size-4" aria-hidden="true" />
+            <span>Back</span>
+          </Link>
+        </Button>
+
+        {/* Content */}
+        <div className="mx-auto max-w-2xl space-y-8">
+          <header className="space-y-8">
+            <article className="space-y-5">
+              <TypographyH1>{project.title}</TypographyH1>
+              <p className="text-muted-foreground text-pretty">
+                {project.description}
+              </p>
+              <div className="space-x-3">
+                <Button asChild>
+                  <Link
+                    href={project.overview.links.liveSiteUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View live site for ${project.title}`}
+                  >
+                    View Live
+                  </Link>
+                </Button>
+                <Button asChild variant="secondary">
+                  <Link
+                    href={project.overview.links.sourceCodeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View source code for ${project.title}`}
+                  >
+                    Source Code
+                  </Link>
+                </Button>
+              </div>
+            </article>
             <AspectRatio ratio={4 / 3}>
               <Image
-                src={project.images.preview.src}
-                alt={project.images.preview.alt}
-                width={400}
-                height={300}
-                className="size-full rounded-lg border object-cover object-top"
+                src={project.overview.preview.src}
+                alt={project.overview.preview.alt}
+                fill
+                className="rounded-md object-cover object-top"
               />
             </AspectRatio>
-          </section>
+          </header>
 
-          {/* Overview */}
-          <article className="grid gap-3 md:order-1 xl:gap-6">
-            {/* Tech stack */}
-            <ul className="flex flex-wrap gap-3 xl:gap-6">
-              {project.techStack.map((tech) => (
-                <li
-                  key={tech}
-                  className="text-muted-foreground text-xs font-medium tracking-wide uppercase"
-                >
-                  {tech}
-                </li>
-              ))}
-            </ul>
-            {/* Title */}
-            <TypographyH1 className="text-primary">
-              {project.title}
-            </TypographyH1>
-            {/* Description  */}
-            <p className="text-muted-foreground leading-relaxed tracking-wide lg:text-lg">
-              {project.description}
-            </p>
-            {/* Button group */}
-            <div className="flex items-center gap-3 xl:gap-6">
-              <Button asChild variant="default">
-                <Link
-                  href={project.urls.liveSiteUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Site
-                </Link>
-              </Button>
-              <Button asChild variant="secondary">
-                <Link
-                  href={project.urls.sourceCodeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Source Code
-                </Link>
-              </Button>
-            </div>
-          </article>
-        </header>
-
-        {/* Project content */}
-        <main>
-          {/* Case Study (if available) */}
-          {project.caseStudy && (
-            <>
-              <TypographyH2 className="sr-only">Case Study</TypographyH2>
-              <section className="grid items-start gap-6 md:grid-cols-2">
-                {/* Overview */}
-                <CSCard
-                  title="Overview"
-                  paragraph={project.caseStudy.overview}
+          <main className="space-y-10">
+            <Article
+              title="Challenges"
+              listItems={project.overview.challenges}
+            />
+            <Article title="Results" paragraph={project.overview.results} />
+            <Article title="Built With" listItems={project.process.builtWith} />
+            <Article
+              title="What I Learned"
+              listItems={project.process.whatILearned}
+            />
+            <Article
+              title="Lighthouse Score"
+              paragraph="Performance metrics from Google Chrome's Lighthouse audit:"
+            >
+              <figure className="space-y-3">
+                <Image
+                  src={project.lighthouse.screenshot.src}
+                  alt={project.lighthouse.screenshot.alt}
+                  width={500}
+                  height={150}
+                  className="rounded-md"
                 />
+                <figcaption className="text-muted-foreground">
+                  <ul className="list-none space-y-1">
+                    {project.lighthouse.highlights.map((highlight, index) => (
+                      <li key={index}>✓ {highlight}</li>
+                    ))}
+                  </ul>
+                </figcaption>
+              </figure>
+            </Article>
+          </main>
 
-                {/* Challenges */}
-                <CSCard
-                  title="Challenges"
-                  listItems={project.caseStudy.challenges}
-                />
-
-                {/* Solutions */}
-                <CSCard
-                  title="Solutions"
-                  listItems={project.caseStudy.solutions}
-                />
-
-                {/* Outcome */}
-                <CSCard
-                  title="Outcomes"
-                  paragraph={project.caseStudy.outcome}
-                />
-              </section>
-            </>
-          )}
-        </main>
+          <footer>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/#contact-section">Get in Touch</Link>
+            </Button>
+          </footer>
+        </div>
       </Wrapper>
     </section>
   );
