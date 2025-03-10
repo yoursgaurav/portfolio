@@ -1,6 +1,6 @@
 # Gaurav Shukla's Portfolio
 
-This is the Git repository for my personal [portfolio](https://heygauravshukla.vercel.app/) website, built with Next.js and shadcn/ui to showcase my web development skills and projects.
+This is the Git repository for my personal [portfolio](https://heygauravshukla.vercel.app) website, built with Next.js and shadcn/ui to showcase my web development skills and projects.
 
 ## Table of contents
 
@@ -36,28 +36,27 @@ Additional development challenges included:
 
 ![Portfolio Desktop Preview](./public/projects/portfolio/desktop-preview.png)
 
-_Desktop view of the portfolio showcasing the hero section._
+_Desktop view of the portfolio._
 
 ### Links
 
 - Source Code: [https://github.com/yoursgaurav/portfolio](https://github.com/yoursgaurav/portfolio)
-- Live Site URL: [https://heygauravshukla.vercel.app/](https://heygauravshukla.vercel.app/)
+- Live Site URL: [https://heygauravshukla.vercel.app](https://heygauravshukla.vercel.app)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- Container queries
 - Mobile-first workflow
 - Utility-first CSS classes
 - Next.js Static Site Generation (SSG)
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Tailwind CSS (v4)](https://tailwindcss.com/) - Utility-first CSS framework
-- [shadcn/ui](https://ui.shadcn.com/) - Accessible UI component library
-- [Lucide](https://lucide.dev/) - A beautiful and consistent icon set
-- [EmailJS](https://www.emailjs.com/) - Client-side email service
+- [React](https://reactjs.org) - JS library
+- [Next.js](https://nextjs.org) - React framework
+- [Tailwind CSS (v4)](https://tailwindcss.com) - Utility-first CSS framework
+- [shadcn/ui](https://ui.shadcn.com) - Accessible UI component library
+- [Lucide](https://lucide.dev) - A beautiful and consistent icon set
+- [EmailJS](https://www.emailjs.com) - Client-side email service
 
 ### What I learned
 
@@ -95,14 +94,12 @@ _Desktop view of the portfolio showcasing the hero section._
 
 ### Continued development
 
-- Enhance website design to meet WCAG standards for accessibility.
 - Implement subtle animations using Tailwind CSS, with opt-out options for users preferring reduced motion.
 
 ### Useful resources
 
-- [shadcn/ui docs](https://ui.shadcn.com/) - Guided me in creating a custom component library with shadcn/ui.
-- [Tailwind CSS container queries guide](https://tailwindcss.com/docs/upgrade-guide#container-configuration) - Clarified how to implement container queries in Tailwind CSS v4.
-- [Next.js Documentation](https://nextjs.org/docs) - Essential for mastering Next.js 15 features.
+- [shadcn/ui docs](https://ui.shadcn.com/docs) - Guided me in creating a custom component library with shadcn/ui.
+- [Next.js docs](https://nextjs.org/docs) - Essential for mastering Next.js 15 features.
 
 ## Author
 
@@ -113,6 +110,5 @@ _Desktop view of the portfolio showcasing the hero section._
 
 These are some of the websites that I took design inspiration from:
 
-- [Ram Maheshwari's portfolio](https://www.rammaheshwari.com/)
-- [Frontend Mentor](https://www.frontendmentor.io/)
-- [shadcn/ui](https://ui.shadcn.com/)
+- [Spotlight - Tailwind CSS Personal Website Template](https://tailwindcss.com/plus/templates/spotlight)
+- [Frontend Mentor](https://www.frontendmentor.io)
