@@ -41,7 +41,7 @@ export const projects: readonly Project[] = [
         "Provide complete keyboard navigation support for improved accessibility and user experience.",
       ],
       preview: {
-        src: "/projects/personal-portfolio/desktop-preview.png",
+        src: "/projects/portfolio/desktop-preview.png",
         alt: "Screenshot of Personal Portfolio homepage",
       },
       links: {
@@ -70,7 +70,7 @@ export const projects: readonly Project[] = [
     },
     lighthouse: {
       screenshot: {
-        src: "/projects/personal-portfolio/lighthouse-scores.png",
+        src: "/projects/portfolio/lighthouse-scores.png",
         alt: "Lighthouse audit results for Personal Portfolio",
       },
       highlights: [
