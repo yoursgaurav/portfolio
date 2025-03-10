@@ -47,9 +47,9 @@ export const skills: SkillItem[] = [
   { name: "Figma", icon: FaFigma },
 
   // Development Practices
-  { name: "API Integration", icon: FaCodeBranch },
-  { name: "Responsive Design", icon: MdDevices },
+  { name: "API integration", icon: FaCodeBranch },
+  { name: "Responsive design", icon: MdDevices },
   { name: "Accessibility", icon: IoAccessibility },
   { name: "SEO", icon: RiSeoLine },
-  { name: "Agile Methodology", icon: FaTasks },
+  { name: "Agile methodology", icon: FaTasks },
 ];
