@@ -29,7 +29,7 @@ export interface Project {
 
 export const projects: readonly Project[] = [
   {
-    slug: "personal-portfolio",
+    slug: "portfolio",
     title: "Personal Portfolio",
     description:
       "A responsive and accessible portfolio website built with Next.js to professionally showcase development skills and project accomplishments",
