@@ -1,3 +1,4 @@
+import { FaTasks } from "react-icons/fa";
 import {
   FaCss3Alt,
   FaFigma,
@@ -41,4 +42,5 @@ export const skills: SkillItem[] = [
   { name: "Responsive design", icon: MdImportantDevices },
   { name: "Accessibility", icon: IoAccessibility },
   { name: "SEO", icon: RiSeoLine },
+  { name: "Agile Methodology", icon: FaTasks },
 ];
