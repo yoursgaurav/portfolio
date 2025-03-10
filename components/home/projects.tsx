@@ -34,8 +34,8 @@ export default function Projects() {
                 <Link href={`/projects/${project.slug}`}>
                   <AspectRatio ratio={4 / 3}>
                     <Image
-                      src={project.images.preview.src}
-                      alt={project.images.preview.alt}
+                      src={project.overview.preview.src}
+                      alt={project.overview.preview.alt}
                       width={400}
                       height={300}
                       className="size-full object-cover object-top transition-all duration-300 hover:scale-105"
@@ -51,18 +51,6 @@ export default function Projects() {
                       {project.title}
                     </TypographyH3>
                   </Link>
-
-                  {/* Project Tech Stack */}
-                  <ul className="flex flex-wrap items-center gap-3">
-                    {project.techStack.map((tech) => (
-                      <li
-                        key={tech}
-                        className="text-muted-foreground text-xs font-bold tracking-wide uppercase"
-                      >
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
 
                   {/* Project Description */}
                   <p className="text-muted-foreground line-clamp-4">
