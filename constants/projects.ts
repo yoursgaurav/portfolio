@@ -41,7 +41,7 @@ export const projects: readonly Project[] = [
         "Provide complete keyboard navigation support for improved accessibility and user experience.",
       ],
       preview: {
-        src: "/projects/portfolio/desktop-preview.png",
+        src: "/projects/portfolio/desktop-preview.jpg",
         alt: "Screenshot of Personal Portfolio homepage",
       },
       links: {

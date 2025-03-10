@@ -34,7 +34,7 @@ Additional development challenges included:
 
 ### Screenshot
 
-![Portfolio Desktop Preview](./public/projects/portfolio/desktop-preview.png)
+![Portfolio Desktop Preview](./public/projects/portfolio/desktop-preview.jpg)
 
 _Desktop view of the portfolio._
 
