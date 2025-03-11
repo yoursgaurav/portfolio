@@ -73,7 +73,7 @@ export default function Contact() {
 
   return (
     <section id="contact-section">
-      <Wrapper className="grid gap-7 py-15 sm:py-19">
+      <Wrapper className="space-y-7 py-15 sm:py-19">
         {/* Section Header */}
         <header>
           <TypographyH2>Contact</TypographyH2>
@@ -101,7 +101,7 @@ export default function Contact() {
               {/* Personal details */}
               <fieldset className="grid gap-5 sm:gap-7 md:grid-cols-2">
                 <legend className="sr-only">Personal details</legend>
-                <div className="grid gap-2">
+                <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
                   <Input
                     id="name"
@@ -113,7 +113,7 @@ export default function Contact() {
                     placeholder="Your Name"
                   />
                 </div>
-                <div className="grid gap-2">
+                <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
                   <Input
                     id="email"
@@ -128,7 +128,7 @@ export default function Contact() {
               </fieldset>
 
               {/* Message */}
-              <div className="grid gap-2">
+              <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
                 <Textarea
                   id="message"

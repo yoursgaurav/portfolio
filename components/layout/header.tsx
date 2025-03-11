@@ -56,7 +56,7 @@ export default function Header() {
                   Browse website navigation links
                 </SheetDescription>
               </SheetHeader>
-              <ul className="grid gap-3 px-5 py-11">
+              <ul className="space-y-3 px-5 py-11">
                 {websiteLinks.map((link) => (
                   <li key={link.name}>
                     <SheetClose asChild>

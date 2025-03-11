@@ -14,7 +14,7 @@ import { projects } from "@/constants/projects";
 export default function Projects() {
   return (
     <section id="projects-section">
-      <Wrapper className="grid gap-7 py-7">
+      <Wrapper className="space-y-7 py-7">
         {/* Section Header */}
         <header>
           <TypographyH2>Projects</TypographyH2>
@@ -44,9 +44,12 @@ export default function Projects() {
                 </Link>
 
                 {/* Project Details */}
-                <div className="grid gap-3 p-5">
+                <div className="space-y-2 p-5">
                   {/* Project Title */}
-                  <Link href={`/projects/${project.slug}`}>
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="inline-block"
+                  >
                     <TypographyH3 className="line-clamp-1 hover:underline">
                       {project.title}
                     </TypographyH3>

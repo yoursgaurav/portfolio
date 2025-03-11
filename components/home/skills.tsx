@@ -8,7 +8,7 @@ import { skills } from "@/constants/skills";
 export default function Skills() {
   return (
     <section id="skills-section">
-      <Wrapper className="grid gap-7 py-15 sm:py-19">
+      <Wrapper className="space-y-7 py-15 sm:py-19">
         {/* Section Header */}
         <header>
           <TypographyH2>Skills</TypographyH2>

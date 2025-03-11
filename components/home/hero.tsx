@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section>
       <Wrapper className="py-7">
-        <article className="grid max-w-2xl gap-7">
+        <article className="max-w-2xl space-y-7">
           {/* Avatar */}
           <Avatar className="size-16">
             <AvatarImage src={AVATAR_CONFIG.src} alt={AVATAR_CONFIG.alt} />
