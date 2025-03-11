@@ -47,7 +47,7 @@ export default function Projects() {
                 <div className="grid gap-3 p-5">
                   {/* Project Title */}
                   <Link href={`/projects/${project.slug}`}>
-                    <TypographyH3 className="text-primary line-clamp-1 transition-all duration-300 hover:underline">
+                    <TypographyH3 className="line-clamp-1 hover:underline">
                       {project.title}
                     </TypographyH3>
                   </Link>
