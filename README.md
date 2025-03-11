@@ -61,13 +61,6 @@ _Desktop view of the portfolio._
 ### What I learned
 
 - Using shadcn/ui to build a custom component library efficiently.
-- Applying container queries in Tailwind CSS v4 to style child elements based on parent container size rather than viewport.
-
-  ```jsx
-  <header className="... @container ...">
-    <Wrapper className="... @5xl:py-4">...</Wrapper>
-  </header>
-  ```
 
 - Integrating services like EmailJS for functional contact forms without a backend or database.
 
@@ -88,13 +81,13 @@ _Desktop view of the portfolio._
   ```
 
 - Leveraging TypeScript for type-safe component props and form data management.
-- Using AI tools to accelerate development while ensuring security through environment variables.
 - Using a `constants/` directory to centralize content management, reducing the need to dig into individual components for updates.
 - Implementing Next.js static site generation with `app/projects/[slug]/page.tsx` to create individual project case study pages that are consistent, maintainable, and avoid code duplication.
+- Using AI tools to accelerate development while ensuring security through environment variables.
 
 ### Continued development
 
-- Implement subtle animations using Tailwind CSS, with opt-out options for users preferring reduced motion.
+- Implement subtle animations using Motion.
 
 ### Useful resources
 
