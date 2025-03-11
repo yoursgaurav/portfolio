@@ -58,7 +58,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <section>
       <Wrapper className="space-y-12 py-12 sm:py-16">
         {/* Back Button */}
-        <Button asChild variant="secondary">
+        <Button asChild variant="secondary" className="rounded-full">
           <Link href="/#projects-section" aria-label="Back to Projects">
             <FaArrowLeft className="mr-2 size-4" aria-hidden="true" />
             <span>Back</span>
@@ -74,7 +74,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 {project.description}
               </p>
               <div className="space-x-3">
-                <Button asChild>
+                <Button asChild className="rounded-full">
                   <Link
                     href={project.overview.links.liveSiteUrl}
                     target="_blank"
@@ -84,7 +84,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     View Live
                   </Link>
                 </Button>
-                <Button asChild variant="secondary">
+                <Button asChild variant="secondary" className="rounded-full">
                   <Link
                     href={project.overview.links.sourceCodeUrl}
                     target="_blank"
@@ -143,7 +143,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </main>
 
           <footer>
-            <Button variant="outline" size="lg" asChild>
+            <Button
+              variant="outline"
+              size="lg"
+              className="rounded-full"
+              asChild
+            >
               <Link href="/#contact-section">Get in Touch</Link>
             </Button>
           </footer>

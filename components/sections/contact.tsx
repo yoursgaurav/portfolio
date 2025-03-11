@@ -155,7 +155,10 @@ export default function Contact() {
               )}
 
               {/* Submit Button */}
-              <Button type="submit" className="cursor-pointer justify-self-end">
+              <Button
+                type="submit"
+                className="cursor-pointer justify-self-end rounded-full"
+              >
                 Send message <IoIosSend className="size-5" />
               </Button>
             </form>

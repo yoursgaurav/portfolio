@@ -44,7 +44,7 @@ export default function Header() {
               <Button
                 variant="secondary"
                 size="lg"
-                className="border md:hidden"
+                className="rounded-full border md:hidden"
               >
                 Menu <ChevronDown className="opacity-50" />
               </Button>
@@ -71,7 +71,7 @@ export default function Header() {
           </Sheet>
 
           {/* Desktop Navigation Menu */}
-          <ul className="bg-secondary text-secondary-foreground hidden items-center gap-7 rounded-md border px-6 py-2 md:flex">
+          <ul className="bg-secondary text-secondary-foreground hidden items-center gap-7 rounded-full border px-6 py-2 md:flex">
             {websiteLinks.map((link) => (
               <li key={link.name}>
                 <Link
@@ -91,7 +91,7 @@ export default function Header() {
             <Button
               variant="secondary"
               size="lg"
-              className="cursor-pointer border"
+              className="cursor-pointer rounded-full border"
             >
               <Sun className="size-4 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
               <Moon className="absolute size-4 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
