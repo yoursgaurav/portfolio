@@ -58,10 +58,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <section>
       <Wrapper className="space-y-12 py-12 sm:py-16">
         {/* Back Button */}
-        <Button asChild variant="secondary" className="rounded-full">
+        <Button
+          asChild
+          variant="secondary"
+          size="icon"
+          className="rounded-full"
+        >
           <Link href="/#projects-section" aria-label="Back to Projects">
-            <FaArrowLeft className="mr-2 size-4" aria-hidden="true" />
-            <span>Back</span>
+            <FaArrowLeft className="size-4" aria-hidden="true" />
           </Link>
         </Button>
 
