@@ -22,7 +22,7 @@ export default function Skills() {
               return (
                 <li
                   key={skill.name}
-                  className="border-secondary text-secondary-foreground hover:border-primary flex cursor-default items-center gap-2 rounded-full border px-5 py-3 transition-colors md:px-6 md:py-4"
+                  className="text-secondary-foreground hover:border-primary flex cursor-default items-center gap-2 rounded-full border px-5 py-3 transition-colors md:px-6 md:py-4"
                 >
                   {Icon && <Icon className="size-5" aria-hidden="true" />}
                   <span className="text-sm font-semibold">{skill.name}</span>
