@@ -11,7 +11,6 @@ This is the Git repository for my personal [portfolio](https://heygauravshukla.v
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -84,10 +83,6 @@ _Desktop view of the portfolio._
 - Using a `constants/` directory to centralize content management, reducing the need to dig into individual components for updates.
 - Implementing Next.js static site generation with `app/projects/[slug]/page.tsx` to create individual project case study pages that are consistent, maintainable, and avoid code duplication.
 - Using AI tools to accelerate development while ensuring security through environment variables.
-
-### Continued development
-
-- Implement subtle animations using Motion.
 
 ### Useful resources
 
