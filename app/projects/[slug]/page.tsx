@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
-import { FaArrowLeft } from "react-icons/fa6";
+import { ArrowLeft, Mail } from "lucide-react";
 
 // Local components
 import Wrapper from "@/components/layout/wrapper";
@@ -58,14 +58,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <section>
       <Wrapper className="space-y-12 py-12 sm:py-16">
         {/* Back Button */}
-        <Button
-          asChild
-          variant="secondary"
-          size="icon"
-          className="rounded-full"
-        >
+        <Button asChild variant="secondary" size="icon">
           <Link href="/#projects-section" aria-label="Back to Projects">
-            <FaArrowLeft className="size-4" aria-hidden="true" />
+            <ArrowLeft />
           </Link>
         </Button>
 
@@ -78,7 +73,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 {project.description}
               </p>
               <div className="space-x-3">
-                <Button asChild className="rounded-full">
+                <Button asChild>
                   <Link
                     href={project.overview.links.liveSiteUrl}
                     target="_blank"
@@ -88,7 +83,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     View Live
                   </Link>
                 </Button>
-                <Button asChild variant="secondary" className="rounded-full">
+                <Button asChild variant="secondary">
                   <Link
                     href={project.overview.links.sourceCodeUrl}
                     target="_blank"
@@ -147,13 +142,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </main>
 
           <footer>
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-full"
-              asChild
-            >
-              <Link href="/#contact-section">Get in Touch</Link>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/#contact-section">
+                <Mail /> Get in Touch
+              </Link>
             </Button>
           </footer>
         </div>
