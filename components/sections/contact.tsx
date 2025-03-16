@@ -3,9 +3,7 @@
 // External dependencies
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { FaEnvelopeCircleCheck } from "react-icons/fa6";
-import { FiAlertCircle } from "react-icons/fi";
-import { IoIosSend } from "react-icons/io";
+import { CircleAlert, MailCheck, SendHorizontal } from "lucide-react";
 
 // Local components
 import Wrapper from "../layout/wrapper";
@@ -84,7 +82,7 @@ export default function Contact() {
           {isSubmitted ? (
             // Success Alert
             <section className="border-chart-2 text-chart-2 my-3 flex items-start gap-3 rounded-md border px-4 py-3">
-              <FaEnvelopeCircleCheck className="mt-1 size-5" />
+              <MailCheck className="mt-1 size-5" />
               <div>
                 <span className="leading-none font-medium tracking-tight">
                   Sent
@@ -144,7 +142,7 @@ export default function Contact() {
               {/* Error Alert */}
               {error && (
                 <div className="text-destructive border-destructive my-3 flex items-start gap-3 rounded-md border px-4 py-3">
-                  <FiAlertCircle className="mt-1 size-5" />
+                  <CircleAlert className="mt-1 size-5" />
                   <div>
                     <span className="leading-none font-medium tracking-tight">
                       Error
@@ -157,9 +155,10 @@ export default function Contact() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="cursor-pointer justify-self-end rounded-full"
+                size="lg"
+                className="cursor-pointer justify-self-end"
               >
-                Send message <IoIosSend className="size-5" />
+                Send message <SendHorizontal />
               </Button>
             </form>
           )}
