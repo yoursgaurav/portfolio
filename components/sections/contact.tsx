@@ -3,7 +3,7 @@
 // External dependencies
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { CircleAlert, MailCheck, SendHorizontal } from "lucide-react";
+import { CircleAlert, Mail, MailCheck } from "lucide-react";
 
 // Local components
 import Wrapper from "../layout/wrapper";
@@ -158,7 +158,7 @@ export default function Contact() {
                 size="lg"
                 className="cursor-pointer justify-self-end"
               >
-                Send message <SendHorizontal />
+                <Mail /> Send Message
               </Button>
             </form>
           )}
