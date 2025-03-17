@@ -15,8 +15,8 @@ export default function Footer() {
   ) || { url: "https://twitter.com/heygauravshukla" };
 
   return (
-    <footer className="bg-secondary text-secondary-foreground">
-      <Wrapper className="py-7">
+    <footer className="bg-secondary text-secondary-foreground mt-32">
+      <Wrapper className="py-6">
         <p className="text-center leading-relaxed text-pretty">
           <span>
             Built with <span className="sr-only">love</span>

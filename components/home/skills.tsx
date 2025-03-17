@@ -7,8 +7,8 @@ import { skills } from "@/constants/skills";
 
 export default function Skills() {
   return (
-    <section id="skills-section">
-      <Wrapper className="space-y-7 py-15 sm:py-19">
+    <section id="skills-section" className="mt-32 scroll-mt-28">
+      <Wrapper className="space-y-6">
         {/* Section Header */}
         <header>
           <TypographyH2>Skills</TypographyH2>
@@ -16,15 +16,15 @@ export default function Skills() {
 
         {/* Main Content */}
         <main>
-          <ul className="flex flex-wrap items-center gap-3 md:gap-4">
+          <ul className="flex flex-wrap items-center gap-4">
             {skills.map((skill) => {
               const Icon = skill.icon; // React component for the social icon
               return (
                 <li
                   key={skill.name}
-                  className="text-secondary-foreground hover:border-primary flex cursor-default items-center gap-2 rounded-full border px-5 py-3 transition-colors md:px-6 md:py-4"
+                  className="text-secondary-foreground hover:border-primary flex cursor-default items-center gap-2 rounded-full border px-4 py-2 transition-colors md:px-6 md:py-4"
                 >
-                  {Icon && <Icon className="size-5" aria-hidden="true" />}
+                  {Icon && <Icon className="size-4" aria-hidden="true" />}
                   <span className="text-sm font-semibold">{skill.name}</span>
                 </li>
               );

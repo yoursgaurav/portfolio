@@ -27,13 +27,13 @@ function Article({
   children?: ReactNode;
 }) {
   return (
-    <article className="space-y-3">
+    <article className="space-y-4">
       <TypographyH2 className="text-xl sm:text-2xl">{title}</TypographyH2>
       {paragraph && (
         <p className="text-muted-foreground text-pretty">{paragraph}</p>
       )}
       {listItems && (
-        <ul className="list-disc space-y-2 pl-7">
+        <ul className="list-disc space-y-2 pl-8">
           {listItems.map((item, index) => (
             <li key={index} className="text-muted-foreground">
               {item}
@@ -55,8 +55,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const project: Project = projects.find((p) => p.slug === slug) || notFound();
 
   return (
-    <section>
-      <Wrapper className="space-y-12 py-12 sm:py-16">
+    <section className="mt-24">
+      <Wrapper className="space-y-10">
         {/* Back Button */}
         <Button asChild variant="secondary" size="icon">
           <Link href="/#projects-section" aria-label="Back to Projects">
@@ -65,14 +65,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </Button>
 
         {/* Content */}
-        <div className="mx-auto max-w-2xl space-y-8">
-          <header className="space-y-8">
-            <article className="space-y-5">
+        <div className="mx-auto max-w-2xl space-y-10">
+          <header className="space-y-10">
+            <article className="space-y-6">
               <TypographyH1>{project.title}</TypographyH1>
               <p className="text-muted-foreground text-pretty">
                 {project.description}
               </p>
-              <div className="space-x-3">
+              <div className="space-x-4">
                 <Button asChild>
                   <Link
                     href={project.overview.links.liveSiteUrl}
@@ -122,7 +122,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               title="Lighthouse Score"
               paragraph="Performance metrics from Google Chrome's Lighthouse audit:"
             >
-              <figure className="space-y-3">
+              <figure className="space-y-4">
                 <Image
                   src={project.lighthouse.screenshot.src}
                   alt={project.lighthouse.screenshot.alt}
@@ -131,7 +131,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                   className="h-auto w-full rounded-md"
                 />
                 <figcaption className="text-muted-foreground">
-                  <ul className="list-none space-y-1">
+                  <ul className="list-none space-y-2">
                     {project.lighthouse.highlights.map((highlight, index) => (
                       <li key={index}>✓ {highlight}</li>
                     ))}

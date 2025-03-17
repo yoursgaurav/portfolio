@@ -12,9 +12,9 @@ import { socialLinks } from "@/constants/navigation";
 
 export default function Hero() {
   return (
-    <section>
-      <Wrapper className="py-7">
-        <article className="max-w-2xl space-y-7">
+    <section className="mt-24">
+      <Wrapper>
+        <article className="max-w-2xl space-y-6">
           {/* Avatar */}
           <Avatar className="size-16">
             <AvatarImage src={AVATAR_CONFIG.src} alt={AVATAR_CONFIG.alt} />
@@ -30,7 +30,7 @@ export default function Hero() {
           </p>
 
           {/* Social Links Navigation */}
-          <ul className="flex items-center gap-7">
+          <ul className="flex items-center gap-6">
             {socialLinks.map((link) => {
               const Icon = link.icon; // React component for the social icon
               return (

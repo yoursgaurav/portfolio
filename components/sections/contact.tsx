@@ -70,8 +70,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact-section">
-      <Wrapper className="space-y-7 py-15 sm:py-19">
+    <section id="contact-section" className="mt-32 scroll-mt-28">
+      <Wrapper className="space-y-6">
         {/* Section Header */}
         <header>
           <TypographyH2>Contact</TypographyH2>
@@ -81,12 +81,10 @@ export default function Contact() {
         <main>
           {isSubmitted ? (
             // Success Alert
-            <section className="border-chart-2 text-chart-2 my-3 flex items-start gap-3 rounded-md border px-4 py-3">
-              <MailCheck className="mt-1 size-5" />
+            <section className="border-chart-2 text-chart-2 flex items-start gap-4 rounded-md border p-4">
+              <MailCheck className="mt-1" />
               <div>
-                <span className="leading-none font-medium tracking-tight">
-                  Sent
-                </span>
+                <span className="font-medium tracking-tight">Sent</span>
                 <p className="text-sm">
                   Thank you! Your message has been sent. I’ll get back to you
                   soon.
@@ -95,9 +93,9 @@ export default function Contact() {
             </section>
           ) : (
             // Contact Form
-            <form onSubmit={handleSubmit} className="grid gap-5 sm:gap-7">
+            <form onSubmit={handleSubmit} className="grid gap-6 sm:gap-8">
               {/* Personal details */}
-              <fieldset className="grid gap-5 sm:gap-7 md:grid-cols-2">
+              <fieldset className="grid gap-6 sm:gap-8 md:grid-cols-2">
                 <legend className="sr-only">Personal details</legend>
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
@@ -141,12 +139,10 @@ export default function Contact() {
 
               {/* Error Alert */}
               {error && (
-                <div className="text-destructive border-destructive my-3 flex items-start gap-3 rounded-md border px-4 py-3">
-                  <CircleAlert className="mt-1 size-5" />
+                <div className="text-destructive border-destructive flex items-start gap-4 rounded-md border p-4">
+                  <CircleAlert className="mt-1" />
                   <div>
-                    <span className="leading-none font-medium tracking-tight">
-                      Error
-                    </span>
+                    <span className="font-medium tracking-tight">Error</span>
                     <p className="text-sm">{error}</p>
                   </div>
                 </div>

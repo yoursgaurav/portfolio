@@ -31,8 +31,8 @@ export default function Header() {
   const { setTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-50">
-      <Wrapper className="flex items-center justify-end gap-3 py-7 md:justify-between">
+    <header className="sticky top-6 z-50">
+      <Wrapper className="flex items-center justify-end gap-4 md:justify-between">
         {/* Empty div for layout purposes */}
         <div aria-hidden="true" />
 
@@ -56,7 +56,7 @@ export default function Header() {
                   Browse website navigation links
                 </SheetDescription>
               </SheetHeader>
-              <ul className="space-y-3 px-5 py-11">
+              <ul className="space-y-4 px-4 py-12">
                 {websiteLinks.map((link) => (
                   <li key={link.name}>
                     <SheetClose asChild>
@@ -71,7 +71,7 @@ export default function Header() {
           </Sheet>
 
           {/* Desktop Navigation Menu */}
-          <ul className="bg-secondary text-secondary-foreground border-primary/20 hidden items-center gap-7 rounded-full border px-6 py-2 md:flex">
+          <ul className="bg-secondary text-secondary-foreground border-primary/20 hidden items-center gap-8 rounded-full border px-6 py-2 md:flex">
             {websiteLinks.map((link) => (
               <li key={link.name}>
                 <Link

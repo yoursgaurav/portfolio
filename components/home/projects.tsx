@@ -13,8 +13,8 @@ import { projects } from "@/constants/projects";
 
 export default function Projects() {
   return (
-    <section id="projects-section">
-      <Wrapper className="space-y-7 py-7">
+    <section id="projects-section" className="mt-32 scroll-mt-28">
+      <Wrapper className="space-y-6">
         {/* Section Header */}
         <header>
           <TypographyH2>Projects</TypographyH2>
@@ -23,7 +23,7 @@ export default function Projects() {
         {/* Main Content */}
         <main>
           {/* Projects List */}
-          <ul className="grid grid-cols-[repeat(auto-fill,minmax(min(280px,100%),1fr))] gap-5 md:gap-7">
+          <ul className="grid grid-cols-[repeat(auto-fill,minmax(min(280px,100%),1fr))] gap-4 md:gap-8">
             {projects.map((project) => (
               // Project Card
               <li
@@ -38,13 +38,13 @@ export default function Projects() {
                       alt={project.overview.preview.alt}
                       width={400}
                       height={300}
-                      className="size-full object-cover object-top transition-all duration-300 hover:scale-105"
+                      className="size-full object-cover object-top transition-all duration-300 hover:scale-106"
                     />
                   </AspectRatio>
                 </Link>
 
                 {/* Project Details */}
-                <div className="space-y-2 p-5">
+                <div className="space-y-2 p-4">
                   {/* Project Title */}
                   <Link
                     href={`/projects/${project.slug}`}
