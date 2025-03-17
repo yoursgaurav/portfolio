@@ -1,6 +1,6 @@
 // External dependencies
 import Link from "next/link";
-import { FaHeart } from "react-icons/fa6";
+import { Heart } from "lucide-react";
 
 // Local components
 import Wrapper from "./wrapper";
@@ -20,17 +20,17 @@ export default function Footer() {
         <p className="text-center leading-relaxed text-pretty">
           <span>
             Built with <span className="sr-only">love</span>
-            <FaHeart
-              className="text-destructive inline"
+            <Heart
+              className="fill-destructive inline stroke-transparent"
               aria-hidden="true"
             />{" "}
-            and too much React by
+            and Next.js by
           </span>{" "}
           <Link
             href={twitterLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-foreground hover:text-primary tracking-tight underline"
+            className="text-foreground hover:text-primary underline"
           >
             Gaurav Shukla
           </Link>
