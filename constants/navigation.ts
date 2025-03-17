@@ -11,6 +11,10 @@ export const websiteLinks: NavigationItem[] = [
   { name: "Skills", url: "/#skills-section" },
   { name: "Projects", url: "/#projects-section" },
   { name: "Contact", url: "/#contact-section" },
+  {
+    name: "Upwork",
+    url: "https://www.upwork.com/freelancers/~01eba44b0f2cfc02f2?mp_source=share",
+  },
 ] as const;
 
 export const socialLinks: NavigationItem[] = [
