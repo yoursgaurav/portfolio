@@ -1,8 +1,13 @@
-import { Chrome, Target } from "lucide-react";
-import { BiLogoTypescript } from "react-icons/bi";
-import { FaTasks } from "react-icons/fa";
 import {
-  FaCodeBranch,
+  Chrome,
+  GitBranch,
+  ListChecks,
+  MonitorSmartphone,
+  PersonStanding,
+  Target,
+} from "lucide-react";
+import { BiLogoTypescript } from "react-icons/bi";
+import {
   FaCss3Alt,
   FaFigma,
   FaGitAlt,
@@ -11,8 +16,6 @@ import {
   FaJs,
   FaReact,
 } from "react-icons/fa6";
-import { IoAccessibility } from "react-icons/io5";
-import { MdDevices } from "react-icons/md";
 import {
   RiNextjsFill,
   RiSeoLine,
@@ -48,11 +51,11 @@ export const skills: SkillItem[] = [
   { name: "Figma", icon: FaFigma },
 
   // Development Practices
-  { name: "API integration", icon: FaCodeBranch },
+  { name: "API integration", icon: GitBranch },
   { name: "Attention to detail", icon: Target },
-  { name: "Responsive design", icon: MdDevices },
+  { name: "Responsive design", icon: MonitorSmartphone },
   { name: "Cross-browser compatibility", icon: Chrome },
-  { name: "Accessibility", icon: IoAccessibility },
+  { name: "Accessibility", icon: PersonStanding },
   { name: "SEO", icon: RiSeoLine },
-  { name: "Agile methodology", icon: FaTasks },
+  { name: "Agile methodology", icon: ListChecks },
 ];
