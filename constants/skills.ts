@@ -1,4 +1,4 @@
-import { Target } from "lucide-react";
+import { Chrome, Target } from "lucide-react";
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaTasks } from "react-icons/fa";
 import {
@@ -51,6 +51,7 @@ export const skills: SkillItem[] = [
   { name: "API integration", icon: FaCodeBranch },
   { name: "Attention to detail", icon: Target },
   { name: "Responsive design", icon: MdDevices },
+  { name: "Cross-browser compatibility", icon: Chrome },
   { name: "Accessibility", icon: IoAccessibility },
   { name: "SEO", icon: RiSeoLine },
   { name: "Agile methodology", icon: FaTasks },
