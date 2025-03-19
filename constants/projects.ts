@@ -32,7 +32,7 @@ export const projects: readonly Project[] = [
     slug: "portfolio",
     title: "Personal Portfolio",
     description:
-      "A responsive and accessible portfolio website built with Next.js to professionally showcase development skills and project accomplishments",
+      "A personal portfolio website to showcase projects and technical expertise. Built with modern web development tools like Next.js, TypeScript, Tailwind CSS, and Shadcn UI. Fully responsive and accessible, with light/dark mode support. Achieved a perfect 100 Lighthouse score on Performance, Accessibility, Best Practices, and SEO.",
     overview: {
       challenges: [
         "Create a fully responsive layout that must adapt seamlessly across all device sizes and screen resolutions.",
@@ -85,7 +85,7 @@ export const projects: readonly Project[] = [
     slug: "shortly",
     title: "Shortly - URL Shortener",
     description:
-      "A fast and reliable URL shortening service built with Next.js and integrated with the Spoo.me API",
+      "A URL shortener web application designed to quickly convert lengthy URLs into shareable short links. Developed using Next.js, TypeScript, Tailwind CSS, and Shadcn UI, the app is fully responsive and accessible. It includes a copy-to-clipboard button for easy sharing and stores shortened links in the browser’s localStorage for quick access across sessions. Achieved Lighthouse scores of 100 for Performance, 96 for Accessibility, 100 for Best Practices, and 100 for SEO.",
     overview: {
       challenges: [
         "Design a responsive layout that needs to maintain optimal display across various screen sizes.",
@@ -142,7 +142,7 @@ export const projects: readonly Project[] = [
     slug: "ip-address-tracker",
     title: "IP Address Tracker",
     description:
-      "An IP tracking application with real-time location mapping built using Next.js and Leaflet.js",
+      "An IP Address Tracker that retrieves geographical location and other details (such as ISP, city, and country) for any IP address, displaying the results on an interactive map. Built with Next.js, Tailwind CSS, and Leaflet.js, the app automatically shows the user’s IP details when the page loads and allows users to search for any other IP address. It is fully responsive and accessible, achieving Lighthouse scores of 100 for Performance, 90 for Accessibility, 96 for Best Practices, and 100 for SEO. This tool is ideal for anyone looking to track IP locations for security, analytics, or general curiosity.",
     overview: {
       challenges: [
         "Optimize layout responsiveness to ensure consistent display across different devices.",
