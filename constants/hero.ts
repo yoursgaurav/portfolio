@@ -1,5 +1,5 @@
 export const AVATAR_CONFIG = {
-  src: "/gaurav-shukla.jpg",
+  src: "/gaurav-shukla.webp",
   alt: "Gaurav Shukla's profile picture",
   fallback: "GS",
 };
