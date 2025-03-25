@@ -30,7 +30,7 @@ export interface Project {
 export const projects: readonly Project[] = [
   {
     slug: "portfolio",
-    title: "Personal Portfolio",
+    title: "Portfolio",
     description:
       "A personal portfolio website to showcase projects and technical expertise. Built with modern web development tools like Next.js, TypeScript, Tailwind CSS, and Shadcn UI. Fully responsive and accessible, with light/dark mode support. Achieved a perfect 100 Lighthouse score on Performance, Accessibility, Best Practices, and SEO.",
     overview: {
@@ -42,10 +42,10 @@ export const projects: readonly Project[] = [
       ],
       preview: {
         src: "/projects/portfolio/desktop-preview.jpg",
-        alt: "Screenshot of Personal Portfolio homepage",
+        alt: "Screenshot of Portfolio homepage",
       },
       links: {
-        sourceCodeUrl: "https://github.com/yoursgaurav/portfolio",
+        sourceCodeUrl: "https://github.com/heygauravshukla/portfolio",
         liveSiteUrl: "https://heygauravshukla.vercel.app",
       },
       results:
@@ -71,7 +71,7 @@ export const projects: readonly Project[] = [
     lighthouse: {
       screenshot: {
         src: "/projects/portfolio/lighthouse-scores.png",
-        alt: "Lighthouse audit results for Personal Portfolio",
+        alt: "Lighthouse audit results for Portfolio",
       },
       highlights: [
         "Performance: 100",
@@ -82,8 +82,8 @@ export const projects: readonly Project[] = [
     },
   },
   {
-    slug: "shortly",
-    title: "Shortly - URL Shortener",
+    slug: "url-shortening-api-landing-page",
+    title: "URL shortening API landing page",
     description:
       "A URL shortener web application designed to quickly convert lengthy URLs into shareable short links. Developed using Next.js, TypeScript, Tailwind CSS, and Shadcn UI, the app is fully responsive and accessible. It includes a copy-to-clipboard button for easy sharing and stores shortened links in the browser’s localStorage for quick access across sessions. Achieved Lighthouse scores of 100 for Performance, 96 for Accessibility, 100 for Best Practices, and 100 for SEO.",
     overview: {
@@ -95,12 +95,14 @@ export const projects: readonly Project[] = [
         "Provide input validation with clear error messaging for empty form submissions.",
       ],
       preview: {
-        src: "/projects/shortly/desktop-preview.jpg",
-        alt: "Screenshot of Shortly URL Shortener homepage",
+        src: "/projects/url-shortening-api-landing-page/desktop-preview.jpg",
+        alt: "Screenshot of URL shortening API landing page",
       },
       links: {
-        sourceCodeUrl: "https://github.com/yoursgaurav/shortly",
-        liveSiteUrl: "https://shortly-by-yoursgaurav.vercel.app",
+        sourceCodeUrl:
+          "https://github.com/heygauravshukla/url-shortening-api-landing-page",
+        liveSiteUrl:
+          "https://url-shortening-api-landing-page-heygauravshukla.vercel.app",
       },
       results:
         "Deployed in 2 weeks with excellent Lighthouse performance scores",
@@ -127,8 +129,8 @@ export const projects: readonly Project[] = [
     },
     lighthouse: {
       screenshot: {
-        src: "/projects/shortly/lighthouse-scores.png",
-        alt: "Lighthouse audit results for Shortly URL Shortener",
+        src: "/projects/url-shortening-api-landing-page/lighthouse-scores.png",
+        alt: "Lighthouse audit results for URL shortening API landing page",
       },
       highlights: [
         "Performance: 100",
@@ -155,8 +157,8 @@ export const projects: readonly Project[] = [
         alt: "Screenshot of IP Address Tracker homepage",
       },
       links: {
-        sourceCodeUrl: "https://github.com/yoursgaurav/ip-address-tracker",
-        liveSiteUrl: "https://ip-address-tracker-by-yoursgaurav.vercel.app",
+        sourceCodeUrl: "https://github.com/heygauravshukla/ip-address-tracker",
+        liveSiteUrl: "https://ip-address-tracker-heygauravshukla.vercel.app",
       },
       results: "Deployed in 1 week with strong Lighthouse performance metrics",
     },
