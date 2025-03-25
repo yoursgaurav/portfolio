@@ -20,7 +20,7 @@ export const websiteLinks: NavigationItem[] = [
 export const socialLinks: NavigationItem[] = [
   {
     name: "GitHub",
-    url: "https://github.com/yoursgaurav",
+    url: "https://github.com/heygauravshukla",
     icon: FaGithub,
   },
   {
