@@ -39,7 +39,7 @@ _Desktop view of the portfolio._
 
 ### Links
 
-- Source Code: [https://github.com/yoursgaurav/portfolio](https://github.com/yoursgaurav/portfolio)
+- Source Code: [https://github.com/heygauravshukla/portfolio](https://github.com/heygauravshukla/portfolio)
 - Live Site URL: [https://heygauravshukla.vercel.app](https://heygauravshukla.vercel.app)
 
 ## My process
